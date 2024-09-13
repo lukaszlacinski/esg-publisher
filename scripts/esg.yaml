@@ -3,7 +3,8 @@ cert: '"na"'
 cmor_path: /path/to/cmip6-cmor-tables/Tables
 data_node: eagle.alcf.anl.gov
 data_roots:
-  /eagle/projects/ESGF2/esg_dataroot/css03_data: css03_data
+#  /eagle/projects/ESGF2/esg_dataroot/css03_data: css03_data
+  /opt/esgf2/data/css03_data: css03_data
 data_transfer_node: "https://g-52ba3.fd635.8443.data.globus.org/{}/{}|application/netcdf|HTTPServer"
 force_prepare: 'false'
 globus_uuid: 8896f38e-68d1-4708-bce4-b1b3a3405809
