@@ -1,12 +1,12 @@
 #!/bin/bash
 
-TMPDIR="/tmp/esgf/$2"
+TMPDIR="/tmp/esgf/$1"
 mkdir -p $TMPDIR
 MAPFILE="$TMPDIR/mapfile.json"
 SCANFILE="$TMPDIR/scanfile.json"
 PUBRECFILE="$TMPDIR/pubrec.json"
 PIDFILE="$TMPDIR/pid.json"
-DATAROOT="/eagle/projects/ESGF2/esg_dataroot/css03_data"
+DATAROOT='/lcrc/group/e3sm2/DSM/Staging/Data/css03_data'
 
 python3.11 ~/repos/esg-publisher/scripts/generate_mapfile.py ${DATAROOT} $1 $MAPFILE
 rc=$?

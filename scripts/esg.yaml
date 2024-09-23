@@ -3,15 +3,28 @@ cert: '"na"'
 cmor_path: /path/to/cmip6-cmor-tables/Tables
 data_node: eagle.alcf.anl.gov
 data_roots:
-#  /eagle/projects/ESGF2/esg_dataroot/css03_data: css03_data
-  /opt/esgf2/data/css03_data: css03_data
+  /lcrc/group/e3sm2/DSM/Staging/Data/css03_data: css03_data
 data_transfer_node: "https://g-52ba3.fd635.8443.data.globus.org/{}/{}|application/netcdf|HTTPServer"
 force_prepare: 'false'
 globus_uuid: 8896f38e-68d1-4708-bce4-b1b3a3405809
 index_node: esgf-node.cels.anl.gov
 pid_creds:
+  - url: handle-esgf-trusted.dkrz.de
+    port: 5671
+    vhost: esgf-pid
+    user: esgf-publisher
+    password: password1
+    ssl_enabled: true
+    priority: 1
+  - url: 140.208.31.31
+    port: 5671
+    vhost: esgf-pid
+    user: esgf-publisher
+    password: password2
+    ssl_enabled: true
+    priority: 2
   - url: aims4.llnl.gov
-    password: password
+    password: password3
     port: 7070
     priority: 1
     ssl_enabled: true
